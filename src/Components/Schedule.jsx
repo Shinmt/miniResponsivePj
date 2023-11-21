@@ -3,7 +3,7 @@ import React from 'react'
 
 const Schedule = () => {
   return (
-    <div className='main bg-neutral-100'>
+    <div className='main'>
       {/* headlinebar */}
       <div className='headline-base'> 
             <div className=' headline-bar'>
@@ -16,15 +16,15 @@ const Schedule = () => {
       </div>
 
       {/* action button */}
-      <div className=' flex flex-col lg:mr-20 lg:mt-4 sm:mt-2 sm:mr-4'>
+      <div className=' flex flex-col lg:mr-20 sm:mr-4 lg:mt-4 sm:mt-2'>
         <div className=' grid grid-flow-col justify-end gap-[18px]'>
-          <button className=' w-[134px] btn-text bg-CTA-color shadow-md '>New Schedule</button>                
+          <button className=' lg:w-[141px] sm:w-full lg:h-8 sm:h-5 sm:px-1 btn-text bg-CTA-color shadow-md '>New Schedule</button>                
         </div>
       </div>
 
       {/* table */}
-      <div className=' relative ml-16 sm:ml-7 lg:pt-7 sm:pt-4 mr-20 lg:mb-[546px] sm:mb-auto'>
-        <table className=' lg:table-auto sm:table-fixed bg-white border-collapse lg:w-full sm:w-[620px] lg:h-[231px] sm:h-auto mr-20 border border-gray-300'>
+      <div className=' relative lg:ml-20 sm:ml-7 lg:pt-4 sm:pt-2 mr-20'>
+        <table className=' lg:table-auto sm:table-fixed bg-white border-collapse lg:w-full sm:w-[620px] lg:h-[260px] sm:h-[300px] mr-20 border border-gray-300'>
           <thead className=' h-[46px]'>
           <tr className=' bg-primary text-white font-mono text-sm font-bold'>
             <th>Year</th>
@@ -35,7 +35,7 @@ const Schedule = () => {
           </tr>
           </thead>
           <tbody className=' lg:w-[155px] sm:w-[50px] h-[35px]'>
-          <tr className='  table-row border border-b-gray-300'>
+          <tr className=' table-row border border-b-gray-300'>
             <td className=' lg:px-7 sm:px-3 '><text className='text-style bg-Year-rgba'>2023</text></td>
             <td className=' lg:px-7 sm:px-3'><text className='text-style bg-Month-rgba'>January</text></td>
             <td className=' lg:px-7 sm:px-3'><text className='text-style bg-Time-rgba'>12:00 AM</text></td>
@@ -51,7 +51,7 @@ const Schedule = () => {
             <td className=' lg:px-7 sm:px-3'><text className='text-style bg-Year-rgba'>From 2024 to 2027</text></td>
             <td className=' lg:px-7 sm:px-3'>
             <div className='flex lg:flex-row sm:flex-col lg:gap-x-[15px] sm:gap-y-1 '>
-              <text className='text-style lg:w-auto bg-Month-rgba'>February</text>
+              <text className='text-style bg-Month-rgba'>February</text>
               <text className='text-style bg-Month-rgba'>March</text>
             </div>
             </td>

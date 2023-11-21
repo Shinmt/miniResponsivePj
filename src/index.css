@@ -4,7 +4,7 @@
 
 @layer components {
     .main{
-        @apply w-full h-full font-mono bg-neutral-100; 
+        @apply w-full h-screen overflow-hidden font-mono bg-neutral-100; 
     }
 
     .headline-base{
@@ -24,31 +24,35 @@
     }
 
     .btn-text{
-        @apply w-[110px] h-[23px] sm:top-[82px] font-semibold sm:font-normal text-sm rounded-[5px];
+        @apply lg:w-[110px] sm:w-fit lg:h-8 sm:h-full sm:top-[82px] font-semibold lg:text-sm sm:text-xs rounded-[5px];
     }
 
     .label-text{
-        @apply w-full sm:w-[127px] sm:mr-[140px] mb-14 text-black;
+        @apply lg:w-fit sm:w-[120px] sm:mr-[140px] mb-9 text-black;
     }
 
     .input-text{
-        @apply px-4 font-normal text-sm bg-[#EAF0F6] pt-1.5 pb-1.5 mb-[50px] rounded-[3px] text-black;
+        @apply px-4 font-normal text-sm bg-[#EAF0F6] pt-1.5 pb-1.5 mb-6 rounded-[3px] text-black;
     }
 
     .footer{
-        @apply w-full sm:w-fit h-[34px] lg:ml-[752px] lg:mr-[791px] sm:mx-[230px] lg:mt-14 sm:mt-2 lg:mb-[24px] sm:mb-3;
+        @apply w-full sm:w-fit mx-auto;
     }
 
     .footer-btn{
-        @apply inline-flex lg:w-[109px] lg:h-[34px] sm:w-20 sm:h-fit lg:gap-2.5 sm:gap-1 py-2 rounded-[5px] text-[#09092D] font-bold lg:text-sm sm:text-xs items-start shadow-md;
+        @apply inline-flex lg:w-[109px] lg:h-8 sm:w-20 sm:h-full lg:gap-2.5 sm:gap-1 py-1.5 rounded-[5px] text-[#09092D] font-bold lg:text-sm sm:text-xs items-start shadow-md;
     }
 
     .text-style{
-        @apply w-full sm:w-[60px] lg:h-[23px] sm:h-auto text-black font-mono lg:text-sm sm:text-xs rounded-[5px] text-center;
+        @apply w-auto h-auto text-black font-mono lg:text-sm sm:text-xs rounded-[5px] text-center px-1 py-0.5;
+    }
+
+    .sidebar-text{
+        @apply px-8 font-mono lg:text-base sm:text-xs font-bold;
     }
 
     .selectbar{
-        @apply flex flex-col sm:flex-row justify-between lg:w-[531px] sm:w-fit lg:h-11 sm:h-9 rounded-[3px] border border-Light-blue bg-white;
+        @apply flex flex-col sm:flex-row justify-between lg:w-[531px] sm:w-auto h-auto rounded-[3px] border border-Light-blue bg-white; /*lg:h-11 sm:h-9*/
     }
 
     .selectbar-text{
