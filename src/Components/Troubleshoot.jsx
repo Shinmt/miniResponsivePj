@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Troubleshoot = () => {
   return (
@@ -10,7 +11,9 @@ const Troubleshoot = () => {
           <div className='headline-text'>
             Troubleshoot
           </div>
-          <div className='headline-X'>X</div>
+          <Link to='/'>
+            <div className='headline-X'>X</div>
+          </Link>
         </div>
       </div>
 
@@ -19,13 +22,13 @@ const Troubleshoot = () => {
       {/* sidebar */}
       <div className='lg:w-[232px] sm:w-40 h-auto bg-white border-r border-[#CDCDCD]'>
         <div className=' flex flex-col lg:pt-[47px] sm:pt-7 justify-center lg:gap-y-9 sm:gap-y-5'>
-          <div className=' grid grid-cols-2 lg:gap-x-0 sm:gap-x-5 items-center'>
+          <button onClick={() => {alert('REASONS!!!');}} className=' grid grid-cols-2 lg:gap-x-0 sm:gap-x-5 items-center hover:bg-[#09092D] hover:text-white '>
           <text className=' sidebar-text'>Reasons</text>
-          <img src='/img/Q.png' className=' w-[15px] h-[15px] text-base' />
-          </div>
-        <text className=' sidebar-text '>Data</text>
-        <text className=' h-[50px] sidebar-text text-white bg-[#09092D] py-3'>Model Parameters</text>
-        <text className=' sidebar-text '>Out-of-Vocabulary Word</text>
+          <button onClick={() => {alert('Do you need some help?');}}><img src='/img/Q.png' className=' w-[15px] h-[15px] text-base' /></button>
+          </button>
+        <text onClick={() => {alert('DATA!!!');}} className=' sidebar-text hover:bg-[#09092D] hover:text-white '>Data</text>
+        <text onClick={() => {alert('This is where we are viewing...');}} className=' h-[50px] sidebar-text hover:bg-[#09092D] hover:text-white py-3'>Model Parameters</text>
+        <text onClick={() => {alert('Out-of-Vocabulary Word~');}} className=' sidebar-text hover:bg-[#09092D] hover:text-white '>Out-of-Vocabulary Word</text>
         </div>
       </div>
 
@@ -98,8 +101,8 @@ const Troubleshoot = () => {
       {/* footer button */}
       <div className=' flex flex-col justify-center lg:px-60 sm:mx-80 py-4'>
             <footer className=' footer lg:gap-40 sm:gap-8 grid grid-flow-col '>
-                <button className='footer-btn lg:px-7 sm:px-4 bg-white border border-Skyblue'>Cancel</button>
-                <button className='footer-btn lg:px-9 sm:px-6 bg-CTA-color'>Save</button>
+                <button onClick={() => {alert('Are you sure to cancel?');}} className='footer-btn lg:px-7 sm:px-4 bg-white border border-Skyblue'>Cancel</button>
+                <button onClick={() => {alert('Successfully save your data!');}} className='footer-btn lg:px-9 sm:px-6 bg-CTA-color'>Save</button>
             </footer>
       </div>
     </div>

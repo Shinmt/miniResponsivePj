@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Schedule = () => {
   return (
@@ -10,7 +11,9 @@ const Schedule = () => {
                 <div className='headline-text'>
               Schedule
           </div>
-          <div className='headline-X'>X</div> 
+          <Link to='/'>
+            <div className='headline-X'>X</div>
+          </Link>
         </div>
 
       </div>
@@ -18,7 +21,7 @@ const Schedule = () => {
       {/* action button */}
       <div className=' flex flex-col lg:mr-20 sm:mr-4 lg:mt-4 sm:mt-2'>
         <div className=' grid grid-flow-col justify-end gap-[18px]'>
-          <button className=' lg:w-[141px] sm:w-full lg:h-8 sm:h-5 sm:px-1 btn-text bg-CTA-color shadow-md '>New Schedule</button>                
+          <button onClick={() => {alert('Do you want to create new schedule?');}} className=' lg:w-[141px] sm:w-full lg:h-8 sm:h-5 sm:px-1 btn-text bg-CTA-color shadow-md '>New Schedule</button>                
         </div>
       </div>
 
@@ -42,8 +45,8 @@ const Schedule = () => {
             <td className=' lg:px-7 sm:px-3'><text className='text-style bg-Day-rgba'>Every 3 days</text></td>
             <td className=' lg:px-7 sm:px-3'>
               <div className=' flex flex-wrap justify-around'>
-                <img src='/img/Edit.png' />
-                <img src='/img/Delete.png' />
+                <button onClick={() => {alert('Edit your data.');}}><img src='/img/Edit.png' /></button>
+                <button onClick={() => {alert('Are you sure to DELETE this?')}}><img src='/img/Delete.png' /></button>
               </div>
             </td>
           </tr>
@@ -64,8 +67,8 @@ const Schedule = () => {
             </td>
             <td className=' lg:px-7 sm:px-3'>
               <div className=' flex flex-wrap justify-around'>
-                <img src='/img/Edit.png' />
-                <img src='/img/Delete.png' />
+              <button onClick={() => {alert('Edit your data.');}}><img src='/img/Edit.png' /></button>
+              <button onClick={() => {alert('Are you sure to DELETE this?')}}><img src='/img/Delete.png' /></button>
               </div>
             </td>
           </tr>
@@ -76,8 +79,8 @@ const Schedule = () => {
             <td className=' lg:px-7 sm:px-3'><text className='text-style bg-Time-rgba'>Every 6 hour</text></td>
             <td className=' lg:px-7 sm:px-3'>
               <div className=' flex flex-wrap justify-around'>
-                <img src='/img/Edit.png' />
-                <img src='/img/Delete.png' />
+              <button onClick={() => {alert('Edit your data.');}}><img src='/img/Edit.png' /></button>
+              <button onClick={() => {alert('Are you sure to DELETE this?')}}><img src='/img/Delete.png' /></button>
               </div>
             </td>
           </tr>

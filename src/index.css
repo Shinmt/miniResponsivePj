@@ -32,7 +32,7 @@
     }
 
     .input-text{
-        @apply px-4 font-normal text-sm bg-[#EAF0F6] pt-1.5 pb-1.5 mb-6 rounded-[3px] text-black;
+        @apply px-4 font-normal text-sm bg-[#EAF0F6] pt-1.5 pb-1.5 rounded-[3px] text-black;
     }
 
     .footer{
