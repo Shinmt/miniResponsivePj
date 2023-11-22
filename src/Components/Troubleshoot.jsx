@@ -39,7 +39,7 @@ const Troubleshoot = () => {
         <p className=' pt-3 font-normal text-sm sm:text-xs'>Following are model parameters that can cause duplicate embedding</p>
 
       {/* data box */}
-      <div className=' lg:py-12 lg:mx-36 sm:py-16 sm:mx-24'>
+      <div className=' lg:py-12 lg:mx-44 sm:py-16 sm:mx-24'>
       <div className=' flex flex-col sm:flex-row'>
 
         {/*items left */}
