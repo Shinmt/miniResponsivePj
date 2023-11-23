@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const Troubleshoot = () => {
+  const [selectPage, setSelectPage] = useState('modelpara');
+
   return (
     <div className='main'>
       {/* headlinebar */}
@@ -17,24 +19,61 @@ const Troubleshoot = () => {
         </div>
       </div>
 
-      <div className=' h-[500px] flex flex-grow border border-b-slate-300'>
+      <div className=' h-4/5 flex flex-grow border border-b-slate-300'>
       
       {/* sidebar */}
       <div className='lg:w-[232px] sm:w-40 h-auto bg-white border-r border-[#CDCDCD]'>
         <div className=' flex flex-col lg:pt-[47px] sm:pt-7 justify-center lg:gap-y-9 sm:gap-y-5'>
-          <button onClick={() => {alert('REASONS!!!');}} className=' grid grid-cols-2 lg:gap-x-0 sm:gap-x-5 items-center hover:bg-[#09092D] hover:text-white '>
-          <text className=' sidebar-text'>Reasons</text>
-          <button onClick={() => {alert('Do you need some help?');}}><img src='/img/Q.png' className=' w-[15px] h-[15px] text-base' /></button>
+          <button onClick={(e) => {
+            setSelectPage(e.target.id);
+            alert('REASONS!');
+          }} 
+          id='reason' 
+          className={ setSelectPage === 'reason' 
+          ? 'grid grid-cols-2 lg:gap-x-0 sm:gap-x-7 items-center bg-[#09092D] text-white' 
+          : 'grid grid-cols-2 lg:gap-x-0 sm:gap-x-7 items-center hover:bg-[#09092D] hover:text-white' }>
+            <text className=' sidebar-text pt-3'>Reasons</text>
+            <img src='/img/Q.png' className=' w-[15px] h-[15px] text-base'/>
           </button>
-        <text onClick={() => {alert('DATA!!!');}} className=' sidebar-text hover:bg-[#09092D] hover:text-white '>Data</text>
-        <text onClick={() => {alert('This is where we are viewing...');}} className=' h-[50px] sidebar-text hover:bg-[#09092D] hover:text-white py-3'>Model Parameters</text>
-        <text onClick={() => {alert('Out-of-Vocabulary Word~');}} className=' sidebar-text hover:bg-[#09092D] hover:text-white '>Out-of-Vocabulary Word</text>
+
+        <text
+        onClick={(e) => {
+          setSelectPage(e.target.id);
+          alert('DATA!');
+        }} 
+        id='data' 
+        className={ setSelectPage === 'data' 
+        ? 'sidebar-text bg-[#09092D] text-white py-3' 
+        : 'sidebar-text hover:bg-[#09092D] hover:text-white py-3'}
+        >Data</text>
+
+        <text
+        onClick={(e) => {
+        setSelectPage(e.target.id);
+        alert('This is the page we are viewing....');
+        }} 
+        id='modelpara'
+        className={ setSelectPage === 'modelpara' 
+        ? 'sidebar-text bg-[#09092D] text-white py-3'
+        : 'sidebar-text hover:bg-[#09092D] hover:text-white py-3'}
+        >Model Parameters</text>
+
+        <text 
+        onClick={(e) => {
+        setSelectPage(e.target.id);
+        alert('Hmphhhh!!!');
+        }} 
+        id='vocab' 
+        className={ setSelectPage === 'vocab' 
+        ? 'sidebar-text bg-[#09092D] text-white'
+        : 'sidebar-text hover:bg-[#09092D] hover:text-white'}
+        >Out-of-Vocabulary Word</text>
+
         </div>
       </div>
 
-      <div className=' h-auto lg:pl-[46px] sm:pl-5 lg:mt-5 sm:mt-8'> {/* lg:mt-5 sm:mt-8 */}
-
-      {/* heading and paragraph */}
+      <div className=' lg:pl-[46px] sm:pl-5 lg:mt-5 sm:mt-8'>
+        {/*heading and paragraph */}
         <h1 className='text-black font-bold text-base '>Model Parameters</h1>
         <p className=' pt-3 font-normal text-sm sm:text-xs'>Following are model parameters that can cause duplicate embedding</p>
 
@@ -99,7 +138,7 @@ const Troubleshoot = () => {
 
       </div>
       {/* footer button */}
-      <div className=' flex flex-col justify-center lg:px-60 sm:mx-80 py-4'>
+      <div className=' absolute inset-x-0 bottom-0 flex flex-col justify-center lg:px-60 sm:mx-80 py-4'>
             <footer className=' footer lg:gap-40 sm:gap-8 grid grid-flow-col '>
                 <button onClick={() => {alert('Are you sure to cancel?');}} className='footer-btn lg:px-7 sm:px-4 bg-white border border-Skyblue'>Cancel</button>
                 <button onClick={() => {alert('Successfully save your data!');}} className='footer-btn lg:px-9 sm:px-6 bg-CTA-color'>Save</button>

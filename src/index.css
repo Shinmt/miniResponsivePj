@@ -28,7 +28,7 @@
     }
 
     .label-text{
-        @apply lg:w-fit sm:w-[120px] sm:mr-[140px] mb-9 text-black;
+        @apply lg:w-fit sm:w-[120px] sm:mr-[140px] lg:text-base sm:text-sm lg:mb-9 sm:mb-[38px] text-black;
     }
 
     .input-text{
@@ -36,7 +36,7 @@
     }
 
     .footer{
-        @apply w-full sm:w-fit mx-auto;
+        @apply w-full h-1/5 sm:w-fit mx-auto;
     }
 
     .footer-btn{
@@ -48,7 +48,7 @@
     }
 
     .sidebar-text{
-        @apply px-8 font-mono lg:text-base sm:text-xs font-bold;
+        @apply h-[50px] px-8 font-mono lg:text-base sm:text-xs font-bold;
     }
 
     .selectbar{
